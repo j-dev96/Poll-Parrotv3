@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:fillViewport="true"
+    android:background="@color/yellow"
+    tools:context="com.noname.PollParrot.homedashboard.fragments.HomeFragment">
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="@string/welcome_to_poll_parrot"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/open_sans"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:background="@color/colorPrimary"/>
+
+
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:background="@drawable/oval_shape"
+            android:padding="12dp"
+            android:gravity="center">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/parrots_animation"
+                app:lottie_speed="1" />
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:id="@+id/addPoll"
+            app:cardCornerRadius="@dimen/margin_small"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardUseCompatPadding="true"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_small">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+
+
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:backgroundTint="@color/red"
+                    android:background="@drawable/oval_shape"
+                    android:padding="12dp"
+                    android:gravity="center">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/add_animation"
+                        app:lottie_speed="1" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.9"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/poll"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:fontFamily="@font/open_sans"
+                        android:gravity="center"
+                        android:textColor="@color/yellow"
+                        android:textSize="18sp"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:layout_marginEnd="@dimen/margin_small"
+                        android:background="@color/yellow"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/click_here_and_create_a_poll"
+                        android:fontFamily="@font/open_sans"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:textColor="@color/yellow"
+                        android:textSize="14sp"
+                        />
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:id="@+id/pinCard"
+            app:cardCornerRadius="@dimen/margin_small"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardUseCompatPadding="true"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_small">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+
+
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:backgroundTint="@color/red"
+                    android:background="@drawable/oval_shape"
+                    android:padding="12dp"
+                    android:gravity="center">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/pin_animatio"
+                        app:lottie_speed="1" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.9"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/join_poll"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:fontFamily="@font/open_sans"
+                        android:gravity="center"
+                        android:textColor="@color/yellow"
+                        android:textSize="18sp"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:layout_marginEnd="@dimen/margin_small"
+                        android:background="@color/yellow"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Click here to join poll"
+                        android:fontFamily="@font/open_sans"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:textColor="@color/yellow"
+                        android:textSize="14sp"
+                        />
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/history"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            app:cardCornerRadius="@dimen/margin_small"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="@color/colorPrimary"
+
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_small">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+
+
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:backgroundTint="@color/red"
+                    android:background="@drawable/oval_shape"
+                    android:padding="12dp"
+                    android:gravity="center">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/history_animation"
+                        app:lottie_speed="1" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.9"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/poll_history"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:fontFamily="@font/open_sans"
+                        android:gravity="center"
+                        android:textColor="@color/yellow"
+                        android:textSize="18sp"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:layout_marginEnd="@dimen/margin_small"
+                        android:background="@color/yellow"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/click_here_to_see_poll_history"
+                        android:fontFamily="@font/open_sans"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:textColor="@color/yellow"
+                        android:textSize="14sp"
+                        />
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/discord"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="end"
+            android:layout_marginStart="@dimen/_125sdp"
+            android:src="@drawable/discord"
+            android:contentDescription="TODO" />
+
+    </LinearLayout>
+
+
+</ScrollView>

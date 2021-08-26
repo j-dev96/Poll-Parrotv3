@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Poll Parrot</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="poll">Create Poll</string>
+    <string name="click_here_and_create_a_poll">Click here to create a poll</string>
+    <string name="history">History</string>
+    <string name="click_here_to_see_poll_history">Click here to see previous polls</string>
+    <string name="add">Add Choice</string>
+    <string name="reps">reps</string>
+    <string name="choice_option">Please Enter a Choice</string>
+    <string name="create_poll">Create Poll</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+    <string name="_1">1</string>
+    <string name="end_poll">End Poll</string>
+    <string name="vote">Vote</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="poll_question">Poll Question</string>
+    <string name="poll_history">Poll History</string>
+    <string name="Choice">Choice</string>
+    <string name="total_choices">Total Choices</string>
+    <string name="show_results">Show Results</string>
+    <string name="Result">Result</string>
+    <string name="join_poll">Join Poll</string>
+    <string name="please_enter_the_question">Please Enter the Question</string>
+    <string name="please_enter_a_6_digit_pin">Please Enter a 6 digit Pin</string>
+    <string name="question">question</string>
+    <string name="welcome_to_poll_parrot">Welcome to Poll Parrot</string>
+    <string name="vote_count">Vote Count</string>
+</resources>

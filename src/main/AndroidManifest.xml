@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.noname.PollParrot">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/parrot"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/parrot"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CityJobTrack">
+        <service
+            android:enabled="true"
+            android:name="com.noname.PollParrot.services.BackgroundSoundService" />
+        <activity
+            android:name=".homedashboard.activity.CreatedPollHistoryActivity"
+            android:theme="@style/AuthActivity.NoActionBar" />
+        <activity
+            android:name=".homedashboard.activity.HomeActivity"
+            android:theme="@style/AuthActivity.NoActionBar" />
+        <activity
+            android:name=".splash.SplashActivity"
+            android:theme="@style/SplashTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    android:background="@color/yellow"
+    tools:context="com.noname.PollParrot.homedashboard.fragments.CreatePollFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:orientation="horizontal">
+
+
+            <com.skydoves.elasticviews.ElasticImageView
+                android:id="@+id/back"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                app:imageView_scale="0.7"
+                app:imageView_duration="300" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/create_poll"
+                android:layout_marginStart="@dimen/margin_large"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/open_sans"            />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:background="@drawable/oval_shape"
+            android:padding="12dp"
+            android:gravity="center">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/parrots_animation"
+                app:lottie_speed="1" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/progress_bar_View"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/oval_shape"
+            android:padding="@dimen/margin_small"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:elevation="@dimen/margin_small"
+            tools:visibility="visible">
+            <ProgressBar
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/createPollView"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/questionInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:focusableInTouchMode="true"
+                android:hint="@string/please_enter_the_question">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/question_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:focusableInTouchMode="true"
+                android:hint="@string/please_enter_a_6_digit_pin">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/pin_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:maxLength="6"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:id="@+id/add_product_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/gray"
+                android:elevation="@dimen/_8sdp"
+                android:orientation="vertical"
+                android:padding="@dimen/_8sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/exerciseInputLayout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_weight="0.3"
+                        android:focusableInTouchMode="true"
+                        android:hint="@string/choice_option"
+                        tools:ignore="InefficientWeight">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/choice_option_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:inputType="text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/add_button"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:text="@string/add"
+                        android:textColor="@color/yellow" />
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="@dimen/_36sdp"
+                android:layout_height="@dimen/_36sdp"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/colorSecondary"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/exercises_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/custom_layout_add_questions_list" />
+            <Button
+                android:id="@+id/create_button"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_large"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/margin_small"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="@string/create_poll"
+                android:textColor="@color/yellow" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/pinLinear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:focusableInTouchMode="true"
+                android:hint="@string/please_enter_a_6_digit_pin">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:maxLength="6"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/password_button"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/margin_40dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="@string/join_poll"
+                android:textColor="@color/yellow" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/voteLinerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+
+            <TextView
+                android:id="@+id/questionForVote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/question"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:fontFamily="@font/open_sans"
+                android:textSize="16sp"
+                android:textColor="@color/colorPrimary"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:nestedScrollingEnabled="false" />
+
+
+            <Button
+                android:id="@+id/voteBtn"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_large"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/margin_small"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="@string/vote"
+                android:textColor="@color/yellow" />
+            <Button
+                android:id="@+id/endPollBtn"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_large"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/margin_small"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="@string/end_poll"
+                android:textColor="@color/yellow" />
+
+            <Button
+                android:id="@+id/showResultsBtn"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_large"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/margin_small"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="@string/show_results"
+                android:textColor="@color/yellow" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</androidx.core.widget.NestedScrollView>
